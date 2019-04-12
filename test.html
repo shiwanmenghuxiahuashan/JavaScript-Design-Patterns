@@ -1,0 +1,379 @@
+<div class="modal-header">
+
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i> </span>
+    </button>
+    <h5 class="modal-title">
+        用户旅程 > 靠近/进入
+    </h5>
+</div>
+
+
+
+
+
+
+<div class="modal-body">
+    <div class="scene_option_con">
+        <div class="scene_filter_con" data-socarclass="envir">
+
+
+
+
+            <div class="col-lg-3">
+                <div class="scene_filter_panel">
+                    <div class="scene_filter_heading scene_envir_modal_0  ">
+
+                        <p class="title">天气 </p>
+                        <i class="socaricon icon-socar_weather_icon"></i>
+                    </div>
+                    <div class="scene_filter_item">
+                        <select data-target="scene_envir_modal_0" data-type="1" class="selectpicker  show-tick" multiple
+                            title="请选择">
+                            <option value="1">日常天气</option>
+
+                            <option value="2">雨天（泥雨，小雨，暴雨，梅雨）</option>
+
+                            <option value="3">雪天</option>
+
+                            <option value="4">雾霾/大雾</option>
+
+                            <option value="5">霜降</option>
+
+                            <option value="6">融冰</option>
+
+                            <option value="7">台风，大风</option>
+
+                            <option value="8">内外温差大季节（冬天，夏天）</option>
+
+                            <option value="9">沙尘暴</option>
+
+                            <option value="10">冰雹</option>
+
+                        </select>
+                    </div>
+                    <div id="scene_envir_modal_0" class="scene_filter_body">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="scene_filter_panel">
+                    <div class="scene_filter_heading scene_envir_modal_1  ">
+
+                        <p class="title">时间 </p>
+                        <i class="socaricon icon-socar_time_icon"></i>
+                    </div>
+                    <div class="scene_filter_item">
+                        <select data-target="scene_envir_modal_1" data-type="2" class="selectpicker  show-tick" multiple
+                            title="请选择">
+                            <option value="11">早高峰</option>
+
+                            <option value="12">晚高峰</option>
+
+                            <option value="13">深夜</option>
+
+                            <option value="14">冬天早晨</option>
+
+                            <option value="15">黄昏/日出</option>
+
+                            <option value="16">周末/节假日</option>
+
+                            <option value="17">高速免费日</option>
+
+                        </select>
+                    </div>
+                    <div id="scene_envir_modal_1" class="scene_filter_body">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="scene_filter_panel">
+                    <div class="scene_filter_heading scene_envir_modal_2  ">
+
+                        <p class="title">路况 </p>
+                        <i class="socaricon icon-socar_signallight_icon"></i>
+                    </div>
+                    <div class="scene_filter_item">
+                        <select data-target="scene_envir_modal_2" data-type="3" class="selectpicker  show-tick" multiple
+                            title="请选择">
+                            <option value="18">市内道路（内部道路、主干道、高架环线）</option>
+
+                            <option value="19">高速路</option>
+
+                            <option value="20">盘旋山路（弯道）</option>
+
+                            <option value="21">沙漠</option>
+
+                            <option value="22">湿滑路面</option>
+
+                            <option value="23">上下坡</option>
+
+                            <option value="24">坑洼路面</option>
+
+                            <option value="25">涉水路面</option>
+
+                            <option value="26">隧道</option>
+
+                            <option value="27">山区道路</option>
+
+                            <option value="28">收费站</option>
+
+                            <option value="29">高架桥路口/收费站</option>
+
+                        </select>
+                    </div>
+                    <div id="scene_envir_modal_2" class="scene_filter_body">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="scene_filter_panel">
+                    <div class="scene_filter_heading scene_envir_modal_3  ">
+
+                        <p class="title">目的 </p>
+                        <i class="socaricon icon-socar_file_icon"></i>
+                    </div>
+                    <div class="scene_filter_item">
+                        <select data-target="scene_envir_modal_3" data-type="4" class="selectpicker  show-tick" multiple
+                            title="请选择">
+                            <option value="30">上下班</option>
+
+                            <option value="31">接送孩子上学，放学</option>
+
+                            <option value="32">周末郊游</option>
+
+                            <option value="33">户外野营</option>
+
+                            <option value="34">就医</option>
+
+                            <option value="35">购物</option>
+
+                            <option value="36">运动</option>
+
+                            <option value="37">机场接送</option>
+
+                            <option value="38">商务用途</option>
+
+                            <option value="39">拉送货/人</option>
+
+                            <option value="40">拼车，顺风车</option>
+
+                        </select>
+                    </div>
+                    <div id="scene_envir_modal_3" class="scene_filter_body">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="scene_filter_con" data-socarclass="person">
+
+
+            <div class="col-lg-3">
+                <div class="scene_filter_panel">
+                    <div class="scene_filter_heading scene_person_modal_0  ">
+
+                        <p class="title">驾驶者 </p>
+                        <i class="socaricon icon-socar_driver_icon"></i>
+                    </div>
+                    <div class="scene_filter_item">
+                        <select data-target="scene_person_modal_0" data-type="5" class="selectpicker  show-tick"
+                            multiple title="请选择">
+                            <option value="41">男性</option>
+
+                            <option value="42">女性</option>
+
+                            <option value="43">孕妇</option>
+
+                            <option value="44">老人</option>
+
+                            <option value="45">初学者</option>
+
+                        </select>
+                    </div>
+                    <div id="scene_person_modal_0" class="scene_filter_body">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="scene_filter_panel">
+                    <div class="scene_filter_heading scene_person_modal_1  ">
+
+                        <p class="title">乘坐人数与关系 </p>
+                        <i class="socaricon icon-socar_relationship_icon"></i>
+                    </div>
+                    <div class="scene_filter_item">
+                        <select data-target="scene_person_modal_1" data-type="6" class="selectpicker  show-tick"
+                            multiple title="请选择">
+
+                            <optgroup data-type="6" label="2人">
+                                <option value="52">情侣</option>
+                                <option value="53">夫妻</option>
+                                <option value="54">父/母+孩子</option>
+                                <option value="55">司机+领导</option>
+                                <option value="56">司机+乘客</option>
+                            </optgroup>
+
+
+                            <optgroup data-type="6" label="3人">
+                                <option value="57">夫妻+儿童</option>
+                                <option value="58">夫妻+婴儿</option>
+                                <option value="59">司机+客人*2</option>
+                                <option value="60">司机+领导*2</option>
+                                <option value="61">商务出行</option>
+                            </optgroup>
+
+
+                            <optgroup data-type="6" label="4人">
+                                <option value="62">夫妻+儿童+婴儿</option>
+                                <option value="63">夫妻+儿童*2</option>
+                                <option value="64">司机+客人*3</option>
+                                <option value="65">商务出行</option>
+                            </optgroup>
+
+
+                            <optgroup data-type="6" label="5人">
+                                <option value="66">夫妻+父母+孩子/婴儿</option>
+                                <option value="67">司机+客人*4</option>
+                                <option value="68">商务出行</option>
+                            </optgroup>
+
+
+                            <optgroup data-type="6" label="6人">
+                                <option value="69">夫妻+父母+孩子*2</option>
+                                <option value="70">夫妻+双方父母</option>
+                                <option value="71">商务出行</option>
+                                <option value="72">司机+客人*5</option>
+                            </optgroup>
+
+
+                            <optgroup data-type="6" label="7人">
+                                <option value="73">夫妻+双方父母+孩子</option>
+                                <option value="74">夫妻+双方父母+孩子*2</option>
+                            </optgroup>
+
+                        </select>
+                    </div>
+                    <div id="scene_person_modal_1" class="scene_filter_body">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="scene_filter_panel">
+                    <div class="scene_filter_heading scene_person_modal_2  ">
+
+                        <p class="title">物品 </p>
+                        <i class="socaricon icon-socar_article_icon"></i>
+                    </div>
+                    <div class="scene_filter_item">
+                        <select data-target="scene_person_modal_2" data-type="7" class="selectpicker  show-tick"
+                            multiple title="请选择">
+
+                            <optgroup data-type="7" label="日常携带">
+                                <option class="lichonglou" value="93">日常携带</option>
+                                <option value="96">手机，钱包，手提包</option>
+                                <option value="97">电脑，Ipad</option>
+                                <option value="98">门票，卡片，证件</option>
+                                <option value="99">热冷饮/奶粉</option>
+                                <option value="100">衣服(西装)、鞋子</option>
+                            </optgroup>
+
+
+                            <optgroup data-type="7" label="出行必备">
+                                <option class="lichonglou" value="94">出行必备</option>
+                                <option value="101">雪地靴，伞，雨鞋，雨衣，大衣，备用鞋</option>
+                                <option value="102">购物袋，购物小推车，婴儿车</option>
+                                <option value="103">宠物</option>
+                                <option value="104">行李箱</option>
+                                <option value="105">玩具</option>
+                                <option value="106">食物、饮品</option>
+                            </optgroup>
+
+
+                            <optgroup data-type="7" label="特殊场景物品">
+                                <option class="lichonglou" value="95">特殊场景物品</option>
+                                <option value="107">体育器材（高尔夫球杆，钓鱼器材等 ）</option>
+                                <option value="108">乐器（大型乐器）</option>
+                                <option value="109">家具（大型家具）</option>
+                                <option value="110">医疗器材（供氧器，轮椅，拐杖）</option>
+                                <option value="111">滑板车，平衡车</option>
+                                <option value="112">鲜花</option>
+                                <option value="113">易碎品</option>
+                                <option value="114">易漏（饭菜，味道）</option>
+                                <option value="115">车载电器</option>
+                            </optgroup>
+
+                        </select>
+                    </div>
+                    <div id="scene_person_modal_2" class="scene_filter_body">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 特征目录 -->
+
+            <div class="col-lg-3" data-socarclass="feature">
+
+                <!-- 可编辑 Ztree -->
+                <div class="scene_filter_panel">
+                    <div class="scene_filter_heading socar_modal_feature_tree_heading ">
+                        <p class="title">特征目录 </p>
+                        <i class="socaricon icon-socar_Catalog_icon"></i>
+                    </div>
+                    <div class="scene_filter_item">
+                        <div class="btn-group bootstrap-select ">
+                            <button type="button" class="btn dropdown-toggle bs-placeholder btn-default"
+                                data-toggle="dropdown" role="button" title="请选择">
+                                <span class="ztree_checked_display  filter-option pull-left"
+                                    data-znodeid="">请选择</span>&nbsp;<span class="bs-caret"><span
+                                        class="caret"></span></span>
+                            </button>
+                            <div class="dropdown_ztree_con">
+                                <ul id="socar_modal_feature_tree" data-target="socar_modal_feature_tree_heading"
+                                    class="ztree" aria-expanded="true"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 可编辑 Ztree end -->
+            </div>
+
+            <!-- 特征目录 end -->
+        </div>
+    </div>
+    <div class="card_details_con">
+        <div class="scene_section_heading">
+            <p class="point_title">触点</p>
+            <div class="point">准备</div>
+        </div>
+        <div class="scene_section_con">
+
+            <div class="scene_section_details_con">
+                <div class="form-group">
+                    <label>场景描述</label>
+                    <textarea type="text" name="scene" class="form-control">ttttttttttttt</textarea>
+                </div>
+                <div class="form-group" data-socarclass="no-marginbottom">
+                    <label>问题描述</label>
+                    <textarea type="text" name="question" class="form-control">tttttttttttttttttttttttt</textarea>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+
+
+    <!-- 可编辑-有mdf.id mdf.url  start -->
+    <div class="btn btn-default" data-dismiss="modal" aria-label="Close">取消</div>
+
+    <button type="submit" data-id="317" data-for="scene_section_details_con" data-ajax="scene/scene/mdf"
+        class="btn btn-socar">确认提交</button>
+
+    <!-- 可编辑 end -->
+</div>

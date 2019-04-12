@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2.3.5-寄生式继承</title>
+</head>
+
+<body>
+    <script>
+        /**
+         2.3.5-寄生式继承
+        */
+
+        function inheritObject(o) {
+            function F() {}; //过渡函数对象
+            F.prototype = o; //过渡对象的原型继承父对象（很像类式继承）
+            return new F(); //返回实例化对象
+        }
+
+
+        function createBook(obj) {
+            //通过原型继承方式创建新对象
+            var o = new inheritObject(obj);
+            //增强对象
+            o.getName = function () {
+                console.log(name);
+            }
+            return o;
+        }
+
+        var book = {
+            name: "js book",
+            alikeBook: ['css', 'html', 'nodejs']
+        };
+
+        var instance = createBook(book);
+
+        instance.alikeBook.push("666");
+
+        console.log(instance);
+    </script>
+</body>
+
+</html>

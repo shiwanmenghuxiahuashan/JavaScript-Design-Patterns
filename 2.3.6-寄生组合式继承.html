@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2.3.6-寄生组合式继承</title>
+</head>
+
+<body>
+    <script>
+        /**
+        2.3.6-寄生组合式继承
+        */
+
+        function inheritPrototype(subType, superType) {
+            // console.log(superType.prototype)
+
+            var prototype = Object.create(superType.prototype); // 创建了父类原型的浅复制+
+            /*
+            修正原型的构造函数
+             prototype.constructor  未修改中前指向的superType 这个没有问题，因为此时的prototype 确实是superType示列化而来的
+
+             constructor属性也是对象才拥有的，它是从一个对象指向一个函数，含义就是指向该对象的构造函数，
+            */
+            /*但是，要将实例化对象指定给subType.prototype 就需要将constructor指向自己*/
+            prototype.constructor = subType;
+
+            subType.prototype = prototype; // 将子类的原型替换为这个原型
+        }
+
+        function SuperType(name) {
+            this.name = name;
+            this.colors = ["red", "blue", "green"];
+        }
+
+        SuperType.prototype.sayName = function () {
+            alert(this.name);
+        };
+
+        function SubType(name, age) {
+            //构造函数式继承--子类构造函数中执行父类构造函数
+            SuperType.call(this, name);
+            this.age = age;
+        }
+        // 核心：因为是对父类原型的复制，所以不包含父类的构造函数，也就不会调用两次父类的构造函数造成浪费
+        inheritPrototype(SubType, SuperType);
+
+        SubType.prototype.sayAge = function () {
+            alert(this.age);
+        }
+        var instance = new SubType("lichonglou");
+        console.log(instance.name)
+        // console.log(instance.constructor)//指向SubType 如果没有修正原型的构造函数，则会指向父类构造函数
+    </script>
+</body>
+
+</html>
