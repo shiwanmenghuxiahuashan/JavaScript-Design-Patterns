@@ -14,20 +14,23 @@
         2.3.6-寄生组合式继承
         */
 
+        /**
+        * subType- 子类型构造函数
+        * superType-超类型构造函数
+        */
         function inheritPrototype(subType, superType) {
-            // console.log(superType.prototype)
+            //1.创建了超类（父类）原型的（副本）浅复制
+            var prototype = Object.create(superType.prototype);
 
-            var prototype = Object.create(superType.prototype); // 创建了父类原型的浅复制+
             /*
-            修正原型的构造函数
-             prototype.constructor  未修改中前指向的superType 这个没有问题，因为此时的prototype 确实是superType示列化而来的
-
-             constructor属性也是对象才拥有的，它是从一个对象指向一个函数，含义就是指向该对象的构造函数，
+                2.修正子类原型的构造函数属性
+                 constructor属性也是对象才拥有的，它是从一个对象指向一个函数，含义就是指向该对象的构造函数
+                prototype.constructor  未修改前指向的 superType，为了弥补因重写原型而失去的默认constructor属性。
+               
             */
-            /*但是，要将实例化对象指定给subType.prototype 就需要将constructor指向自己*/
             prototype.constructor = subType;
-
-            subType.prototype = prototype; // 将子类的原型替换为这个原型
+            // 3.将子类的原型替换为超类（父类）原型的（副本）浅复制
+            subType.prototype = prototype;
         }
 
         function SuperType(name) {

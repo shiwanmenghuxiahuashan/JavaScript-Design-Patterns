@@ -15,7 +15,7 @@
         */
 
         function inheritObject(o) {
-            function F() {}; //过渡函数对象
+            function F() { }; //过渡函数对象
             F.prototype = o; //过渡对象的原型继承父对象（很像类式继承）
             return new F(); //返回实例化对象
         }
@@ -23,10 +23,10 @@
 
         function createBook(obj) {
             //通过原型继承方式创建新对象
-            var o = new inheritObject(obj);
+            var o = inheritObject(obj);
             //增强对象
             o.getName = function () {
-                console.log(name);
+                console.log(this.name);
             }
             return o;
         }
@@ -36,11 +36,28 @@
             alikeBook: ['css', 'html', 'nodejs']
         };
 
-        var instance = createBook(book);
+        // var instance = createBook(book);
 
-        instance.alikeBook.push("666");
+        // instance.alikeBook.push("666");
+        //     instance.getName()
+        // console.log(instance);
 
-        console.log(instance);
+
+        var arr = ['数组就不是对象了啊？', 'JS里一切皆对象', '第三句是废话', '其实第四句也是'];
+
+        var newArr = Object.create(arr);
+
+        //增强对象
+        newArr.getLast = function () {
+            console.log(this[this.length - 1]);
+        }
+
+        newArr.getLast();//其实第四句也是
+
+        console.log(newArr);
+
+        console.log(newArr.__proto__)// ["数组就不是对象了啊？", "JS里一切皆对象", "第三句是废话", "其实第四句也是"]0: "数组就不是对象了啊？"1: "JS里一切皆对象"2: "第三句是废话"3: "其实第四句也是"length: 4__proto__: Array(0)
+        
     </script>
 </body>
 
