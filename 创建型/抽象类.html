@@ -12,17 +12,17 @@
 
     <script>
         //暂时还没理解其意义 2019-3-1 13:54
-        var Car = function () {};
+        var Car = function () { };
         Car.prototype = {
             getPrice: function () {
-                throw new Error("抽象方法不能调用"); 
+                throw new Error("抽象方法不能调用");
             },
             getSpeed: function () {
-                throw new Error("抽象方法不能调用"); 
+                throw new Error("抽象方法不能调用");
             }
         }
-        var auto=new Car();
-       auto.getPrice();
+        var auto = new Car();
+        auto.getPrice();
     </script>
 </body>
 
