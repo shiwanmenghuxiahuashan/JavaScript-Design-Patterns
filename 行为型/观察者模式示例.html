@@ -167,9 +167,9 @@
             extend(check, new Observer());
 
             // Override with custom update behaviour
-            // check.update = function (value) {
-            //     this.checked = value;
-            // };
+            check.update = function (value) {
+                this.checked = value;
+            };
 
             // Add the new observer to our list of observers
             // for our main subject
